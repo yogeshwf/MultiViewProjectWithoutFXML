@@ -1,12 +1,9 @@
 package com.gluonapplication;
 
-import java.util.function.Supplier;
-
 import com.gluonapplication.views.NewFXMLView;
 import com.gluonapplication.views.PrimaryView;
 import com.gluonapplication.views.SecondaryView;
 import com.gluonhq.charm.glisten.application.MobileApplication;
-import com.gluonhq.charm.glisten.mvc.View;
 import com.gluonhq.charm.glisten.visual.Swatch;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -22,7 +19,7 @@ public class GluonApplication extends MobileApplication {
     public void init() {
         addViewFactory(PRIMARY_VIEW, PrimaryView::new);
         addViewFactory(SECONDARY_VIEW, SecondaryView::new);
-        addViewFactory(NEW_VIEW, () -> new NewFXMLView().getView());
+        addViewFactory(NEW_VIEW, NewFXMLView::new);
         
         DrawerManager.buildDrawer(this);
     }
