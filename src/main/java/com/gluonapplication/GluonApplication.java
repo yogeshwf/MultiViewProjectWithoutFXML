@@ -1,6 +1,6 @@
 package com.gluonapplication;
 
-import com.gluonapplication.views.NewFXMLView;
+import com.gluonapplication.views.ListView;
 import com.gluonapplication.views.PrimaryView;
 import com.gluonapplication.views.SecondaryView;
 import com.gluonhq.charm.glisten.application.MobileApplication;
@@ -13,13 +13,13 @@ public class GluonApplication extends MobileApplication {
 
     public static final String PRIMARY_VIEW = HOME_VIEW;
     public static final String SECONDARY_VIEW = "Secondary View";
-    public static final String NEW_VIEW = "New View";
+    public static final String LIST_VIEW = "List View";
     
 	@Override
     public void init() {
         addViewFactory(PRIMARY_VIEW, PrimaryView::new);
         addViewFactory(SECONDARY_VIEW, SecondaryView::new);
-        addViewFactory(NEW_VIEW, NewFXMLView::new);
+        addViewFactory(LIST_VIEW, ListView::new);
         
         DrawerManager.buildDrawer(this);
     }

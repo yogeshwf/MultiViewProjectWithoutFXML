@@ -14,7 +14,7 @@ import javafx.scene.image.Image;
 
 import static com.gluonapplication.GluonApplication.PRIMARY_VIEW;
 import static com.gluonapplication.GluonApplication.SECONDARY_VIEW;
-import static com.gluonapplication.GluonApplication.NEW_VIEW;
+import static com.gluonapplication.GluonApplication.LIST_VIEW;;
 
 public class DrawerManager {
 
@@ -28,7 +28,7 @@ public class DrawerManager {
         
         final Item primaryItem = new ViewItem("Primary", MaterialDesignIcon.HOME.graphic(), PRIMARY_VIEW, ViewStackPolicy.SKIP);
         final Item secondaryItem = new ViewItem("Secondary", MaterialDesignIcon.DASHBOARD.graphic(), SECONDARY_VIEW);
-        final Item NewItem = new ViewItem("new", MaterialDesignIcon.OPEN_IN_NEW.graphic(), NEW_VIEW);
+        final Item NewItem = new ViewItem("new", MaterialDesignIcon.OPEN_IN_NEW.graphic(), LIST_VIEW);
         drawer.getItems().addAll(primaryItem, secondaryItem, NewItem);
         
         if (Platform.isDesktop()) {
